@@ -1,11 +1,8 @@
 <?php session_start(); 
-// echo 'User:';
-// echo $_SESSION['User'];
 ?>
 <!DOCTYPE>
 <html>
 <head>
-<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 </head>
@@ -22,7 +19,6 @@
   margin-right: auto;
 }
 
-/* Clearfix (clear floats) */
 .row::after {
   content: "";
   clear: both;
@@ -45,43 +41,23 @@
 <div class="col-md-8">
 <div class="form-group">
 
-<!-- <p><b>Plase Select a Item</b></p>
-<Select name='MakeRequest'>
-	<optgroup label="Pork" style="font-weight:bold;">Pork</optgroup>
-	<Option Value='Pork chops'>Pork chops</Option>
-	<Option Value='Pig feet'>Pig feet</Option>
-	<optgroup label="Beef" style="font-weight:bold;">Beef</optgroup>	
-	<Option Value='Steak'>Steak</Option>
-	<Option Value='Burdock'>Burdock</Option>
-	<optgroup label="Chicken" style="font-weight:bold;">Chicken</optgroup>
-	<Option Value='Chicken leg'>Chicken leg</Option>
-	<Option Value='Chicken egg'>Chicken leg</Option>
-	<optgroup label="Fish" style="font-weight:bold;">Fish</optgroup>
-	<Option Value='Salmon'>Salmon</Option>
-	<Option Value='Tuna Fish'>Tuna Fish</Option>
-	<optgroup label="Tableware" style="font-weight:bold;">Tableware</optgroup>
-	<Option Value='Bowl'>Bowl</Option>
-	<Option Value='Chopsticks'>Chopsticks</Option>
-</Select> -->
-
 <form name="StaffInfo" action="MakeRequestController.php" method="post" id="contact-form">
 	<label>Plase Select a Item</label><br>
 	<Select name='MakeRequest'>
 	<optgroup label="Pork" style="font-weight:bold;">Pork</optgroup>
-	<Option Value='Pork chops'>Pork chops</Option>
-	<Option Value='Pig feet'>Pig feet</Option>
+	<Option Value='Pig foot'>Pig foot</Option>
 	<optgroup label="Beef" style="font-weight:bold;">Beef</optgroup>	
 	<Option Value='Steak'>Steak</Option>
 	<Option Value='Burdock'>Burdock</Option>
 	<optgroup label="Chicken" style="font-weight:bold;">Chicken</optgroup>
-	<Option Value='Chicken leg'>Chicken leg</Option>
-	<Option Value='Chicken egg'>Chicken leg</Option>
-	<optgroup label="Fish" style="font-weight:bold;">Fish</optgroup>
-	<Option Value='Salmon'>Salmon</Option>
-	<Option Value='Tuna Fish'>Tuna Fish</Option>
+	<Option Value='Chicken wings'>Chicken wings</Option>
+	<Option Value='Chicken Egg'>Chicken Egg</Option>
+	<Option Value='Chicken Legs'>Chicken Legs</Option>
 	<optgroup label="Tableware" style="font-weight:bold;">Tableware</optgroup>
-	<Option Value='Bowl'>Bowl</Option>
-	<Option Value='Chopsticks'>Chopsticks</Option>
+	<Option Value='Cross'>Cross</Option>
+	<Option Value='Knife'>Knife</Option>
+	<optgroup label="Other" style="font-weight:bold;">Other</optgroup>
+	<Option Value='Luncheon meat'>Luncheon meat</Option>
 </Select><br><br>
 <label for="Qty">Qty</label>
 <input type="number" class="form-control" name="Qty" placeholder="Qty" required>
@@ -89,9 +65,10 @@
 
 <button type="submit" class="btn btn-primary" name="submit" value="Submit" id="submit_form">Submit</button>
 <button type="reset" class="btn btn-danger" name="Reset" value="Reset" id="reset_form">Reset</button>
-
+<button type="button" class="btn btn-info" name="Reset" value="Reset" id="reset_form" onclick="location='RMindex.php'">Back</button>
+<button type="button" class="btn btn-success" name="Reset" value="Reset" id="reset_form" onclick="location='CheckRequest.php'">Check Request</button>
+<button type="button" class="btn btn-warning" onclick='location="Login2.php"'>Logout</button>
 </form>
-
 
 <div class="response_msg"></div>
 </div>

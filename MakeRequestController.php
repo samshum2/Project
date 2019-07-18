@@ -1,6 +1,5 @@
 <?php session_start();
-// $User = $_SESSION['User'];
-// echo "$User";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,9 +18,6 @@ $Qty = $_POST['Qty'];
 $User = $_SESSION['User'];
 
 $link=mysqli_connect("localhost","root","","assignment");
-// mysqli_select_db($link,"assignment");
-// $data=mysqli_query($link,"SELECT * from item");
-// $NumOfData=mysqli_num_rows($data);
 $sql = "INSERT INTO REQUEST (User,ITEM,QTY)
 VALUES (\"$User\",\"$Item\",\"$Qty\")";
 	
@@ -32,7 +28,20 @@ echo "<h1><img src='img/ERP.png' width='100px'>Make Request</h1>";
 
 echo "$Item<br>";
 echo "$Qty<br>";
-echo "Done!"
+echo "Done!";
+echo "System will redirect to last page in 3 sec.";
+
+
+
+header( "refresh:3;url=makeRequest.php" );
+
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<button type=\"button\" class=\"btn btn-info\" name=\"Reset\" value=\"Reset\" id=\"reset_form\" onclick=\"location='MakeRequest.php'\">Back Now!</button>";
+echo "<button type=\"button\" class=\"btn btn-warning\" onclick='location=\"Login2.php\"'>Logout</button>";
+
 ?>
 
 

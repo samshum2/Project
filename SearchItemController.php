@@ -25,17 +25,6 @@ $NumOfData=mysqli_num_rows($data);
 echo "<h1><img src='img/ERP.png' width='100px'>Search Result</h1>";
 $count = 0;
 
-// echo "$ItemID";
-// echo "<br>";
-// echo "$ItemName";
-// echo "<br>";
-// echo "$Description";
-// echo "<br>";
-// echo "$VirtualID";
-// echo "<br>";
-// echo "$Sub_CategoryID";
-// echo "<br>";
-
 if ($ItemID==""){
 	$ItemID=',';
 }
@@ -52,10 +41,7 @@ if ($Category_Type==""){
 	$Category_Type=',';
 }
 
-
-
-
-	echo "<table border='1'>"; 
+	echo "<table border='1' class='table table-hover'>"; 
 	echo "<tr>"; 
 	echo "<th>Item ID</th>";
 	echo "<th>Item Name</th>";
@@ -63,7 +49,6 @@ if ($Category_Type==""){
 	echo "<th>Virtual ID</th>";
 	echo "<th>Sub Category ID</th>";
 	echo '</tr>';
-
 
 
 	for ($i=0;$i<$NumOfData;$i++){
@@ -95,40 +80,14 @@ if ($Category_Type==""){
 			for ($j=0;$j<=4;$j++){
 				echo "<td align='center'>".$rs[$j]."</td>";
 			}
-		// $rs=mysqli_fetch_row($data);
-		// print_r($rs);
-		// echo '<br>';
 		echo "</tr>"; 
 		}
-		
-
-
-
-
-		// if ($ItemID==$rs[0])
-		// 	for ($j=0;$j<=4;$j++){
-		// 		echo "<td align='center'>".$rs[$j]."</td>";
-		// 	}
-		// // $rs=mysqli_fetch_row($data);
-		// // print_r($rs);
-		// // echo '<br>';
-		// echo "</tr>"; 
 	}
 	echo "</table>";
 	echo "There ".$count." Records";
-	 // $rs=mysqli_fetch_row($data);
-	 // print (gettype($rs));
-	 // echo '<br>';
-	 // print_r($rs);
-	 // echo '<br>';
-	 // $rs=mysqli_fetch_row($data);
-	 // print_r($rs);
-	 // echo '<br>';
-	 // $rs=mysqli_fetch_row($data);
-	 // print_r($rs);
-	 // echo '<br>';
-	 // echo 'Num of row:<br>';
-	 // echo $NumOfData;
+	echo "<br>";
+	echo "<button type=\"button\" class=\"btn btn-primary\" onclick='location=\"SearchItem.php\"'>Back</button> ";
+	echo "<button type=\"button\" class=\"btn btn-warning\" onclick='location=\"Login2.php\"'>Logout</button>";
 
 ?>
 

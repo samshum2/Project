@@ -1,7 +1,6 @@
 <!DOCTYPE>
 <html>
 <head>
-<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 </head>
@@ -14,7 +13,6 @@
 
 
 <div class="form-group">
-<!-- <label for="Account">Staff ID or Phone No.</label> -->
 <label for="ItemID">Item ID</label>
 <input type="text" class="form-control" name="ItemID" placeholder="Item ID">
 </div>
@@ -41,6 +39,8 @@
 
 <button type="submit" class="btn btn-primary" name="submit" value="Submit" id="submit_form">Submit</button>
 <button type="reset" class="btn btn-danger" name="Reset" value="Reset" id="reset_form">Reset</button>
+<!-- <button type="button" class="btn btn-primary" onclick="history.back()">Back</button> -->
+<button type="button" class="btn btn-warning" onclick='location="Login2.php"'>Logout</button>
 </form>
 
 

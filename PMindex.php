@@ -22,13 +22,13 @@
 					<center><a href="SearchItem.php"><img src=img/searchItem.png width="100"></a></center>
 				</td>
 				<td width="150">
-					<center><a href="PMindex.html"><img src=img/setRule.png width="100"></a></center>
+					<center><a href="PMindex.php"><img src=img/setRule.png width="100"></a></center>
 				</td>
 				<td width="150">
 					<center><a href="MapRequest.php"><img src=img/mapRequest.png width="130"></a></center>
 				</td>
 				<td width="150">
-					<center><a href="PMindex.html"><img src=img/Queue.png width="100"></a></center>
+					<center><a href="queue.php"><img src=img/Queue.png width="100"></a></center>
 				</td>
 			</tr>
 			<tr>

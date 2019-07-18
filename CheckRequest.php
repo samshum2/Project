@@ -25,9 +25,6 @@ mysqli_select_db($link,"assignment");
 $User = $_SESSION['User'];
 $data=mysqli_query($link,"SELECT * from request where User=$User");
 $NumOfData=mysqli_num_rows($data);
-// echo 'User:';
-// echo $_SESSION['User'];
-// echo "<br>";
 $User = $_SESSION['User'];
 $Count = 0;
 
@@ -39,13 +36,14 @@ function testfun(){
 
 
 
-echo "<table border='1'>"; 
+echo "<table border='1' class='table table-hover'>"; 
 echo "<tr>"; 
 echo "<th height='40' align='center' >Request ID</th>";
 // echo "<th height='40' align='center'>Purchaser ID</th>";
-echo "<th height='40' align='center'>Item Name</th>";
-echo "<th height='40' align='center' width='100'>Qty</th>";
-echo "<th height='40' align='center'>State</th>";
+echo "<th align='center'>Item Name</th>";
+echo "<th align='center' width='100'>Qty</th>";
+echo "<th align='center'>State</th>";
+// echo "<th align='center'>WH Qty</th>";
 echo "</tr>";
 
 $count = $NumOfData;
@@ -76,9 +74,8 @@ echo "You $count Request have not been Map<br>";
 
 
 <button type="button" onclick="history.back()" class="btn btn-primary" name="submit" value="Submit" id="submit_form">Back</button>
+<button type="button" class="btn btn-warning" onclick='location="Login2.php"'>Logout</button>
 </form>
-
-
 <div class="response_msg"></div>
 </div>
 </div>
